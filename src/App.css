@@ -1,3 +1,7 @@
+* {
+  list-style-type: none;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,44 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.block {
+  border: 1px solid black;
+  height: 25vh;
+  width: 25vh;
+  box-shadow: 0 1vh 1vh -2px rgba(116, 114, 114, 0.2);
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: center;
+}
+
+
+.container-fluid  .calendar {
+  display: grid;
+  grid-template-columns: repeat(4, 25vh);
+
+}
+.users {
+  display: none;
+}
+
+.users li {
+  margin-bottom: 1vh;
+}
+
+.month {
+  display: block;
+  text-align: center;
+}
+
+.block:hover .users {
+  display: block;
+}
+.block:hover .month {
+  display: none;
 }
